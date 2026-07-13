@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab, What I Make When Nobody Asks · Ana Muros</title>
+<meta name="description" content="Personal motion work: pieces made without a brief, where craft gets to play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+<style>
+.media.wide{aspect-ratio:16/9;width:min(100%,820px)}
+.lab-piece{display:flex;flex-direction:column;align-items:center;gap:12px;padding:32px 0}
+.frames{width:min(100%,420px);border-radius:10px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">ANA MUROS :)</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case">
+  <div class="container">
+    <p class="meta reveal">LAB · PERSONAL WORK · NO BRIEF, NO CLIENT</p>
+    <h1 class="display reveal">What I make when nobody asks</h1>
+    <p class="tagline reveal">Pieces born without a deadline, a stakeholder or a KPI, just the itch to make something move.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="intro reveal">
+    <p>Client work teaches discipline; personal work keeps the taste alive. These are pieces I built for no one, which is exactly why they matter: every choice here, palette, rhythm, easing, is mine alone. This is what my hands do when they're free.</p>
+  </div>
+
+  <section class="lab-piece">
+    <h2 class="h2 reveal">Circle Society <span class="arrow">&gt;</span></h2>
+    <div class="media wide reveal" data-video="videos/lab.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">lab.mp4</span></div>
+    <p class="cap meta reveal">MOTION IDENTITY · GEOMETRY, ORBITS AND ONE VIOLET PLANET</p>
+    <img class="frames reveal" src="images/lab-circle-frames.jpg" alt="Circle Society, styleframes of the piece" loading="lazy">
+    <p class="cap meta reveal">STYLEFRAMES</p>
+  </section>
+
+  <section class="lab-piece">
+    <h2 class="h2 reveal">The Shape of Things <span class="arrow">&gt;</span></h2>
+    <div class="media wide reveal" data-video="videos/lab-shape.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">lab-shape.mp4</span></div>
+    <p class="cap meta reveal">TITLE SEQUENCE STUDY · BOLD GEOMETRY, EDITORIAL COLOR</p>
+  </section>
+
+  <section class="lab-piece">
+    <h2 class="h2 reveal">Seed and Stem <span class="arrow">&gt;</span></h2>
+    <div class="media wide reveal" data-video="videos/lab-seed.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">lab-seed.mp4</span></div>
+    <p class="cap meta reveal">CHARACTER &amp; SCENE ANIMATION · A PLANT WITH A PERSONALITY</p>
+  </section>
+
+  <div class="pn">
+    <a href="index.html#work">&larr; Back to work</a>
+    <a href="index.html#contact">Let's talk <span class="arrow">&gt;</span></a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.media[data-video]').forEach(w=>{const v=w.querySelector('video');v.src=w.dataset.video;v.addEventListener('error',()=>w.classList.add('missing'))});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const v=e.target.querySelector('video');if(v&&!e.target.classList.contains('missing'))v.play().catch(()=>{})}else{const v=e.target.querySelector('video');if(v)v.pause()}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
