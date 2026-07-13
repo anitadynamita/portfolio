@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primark, X-Mas, Two Routes · Ana Muros</title>
+<meta name="description" content="One Christmas brief, two creative routes, motion design for Primark's 2023 holiday campaign.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">ANA MUROS :)</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case">
+  <div class="container">
+    <p class="meta reveal">PRIMARK · PUBLICIS · X-MAS 2023</p>
+    <h1 class="display reveal">One brief, two routes</h1>
+    <p class="tagline reveal">Divergent thinking as a deliverable, the same Christmas brief answered with two different creative personalities.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="facts reveal">
+    <div><p class="k">Year</p><p class="v">2023</p></div>
+    <div><p class="k">Industry</p><p class="v">Fashion · Retail</p></div>
+    <div><p class="k">Work</p><p class="v">Motion Design, Edit, Social Adaptation</p></div>
+    <div><p class="k">Format</p><p class="v">9:16 · Meta · 10s</p></div>
+  </div>
+
+  <div class="intro reveal">
+    <p>Every Christmas, Primark’s holiday campaign has to do two jobs at once: feel like the warm tradition people expect, and cut through a feed saturated with everyone else’s warmth.</p>
+  </div>
+
+  <div class="beats reveal">
+    <div class="beat"><p class="bk"><span class="n">01</span>Objective</p><p>Own Christmas familiarity <em>and</em> stop thumbs in December’s most crowded feed, two goals that usually pull a campaign in opposite directions.</p></div>
+    <div class="beat"><p class="bk"><span class="n">02</span>Idea</p><p>Don’t pick a lane, build two. Route A leans classic comfort; Route B goes editorial and fashion-forward. Divergent thinking delivered as a shippable asset, not a mood board.</p></div>
+    <div class="beat"><p class="bk"><span class="n">03</span>Execution</p><p>Motion, edit and finishing of both routes’ 10-second 9:16 Meta cutdowns, each route’s personality kept intact at feed-first pacing.</p></div>
+    <div class="beat"><p class="bk"><span class="n">04</span>Result</p><p>Two live routes giving media two genuinely different bets on the same brief, creativity structured so performance data could pick the winner.</p></div>
+  </div>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">Two personalities, one brief <span class="arrow">&gt;</span></h2>
+    <p class="lede reveal" style="color:var(--ink-60)">Watch them side by side, same season, same brand, two completely different bets on what stops a thumb in December.</p>
+    <div class="vgrid two">
+      <div class="reveal"><div class="media" data-video="videos/primark.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">primark</span></div><p class="cap meta">ROUTE A · TRADITIONAL</p></div>
+      <div class="reveal"><div class="media" data-video="videos/primark-b.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">primark-b</span></div><p class="cap meta">ROUTE B · TWKS</p></div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">The beats of Route A <span class="arrow">&gt;</span></h2>
+    <p class="lede reveal" style="color:var(--ink-60)">Ten seconds, three acts, how the traditional route builds its little story.</p>
+    <div class="still-strip reveal">
+      <img class="still" src="images/primark-f1.jpg" alt="Primark X-Mas Route A, opening beat" loading="lazy">
+      <img class="still" src="images/primark-f5.jpg" alt="Primark X-Mas Route A, middle beat" loading="lazy">
+      <img class="still" src="images/primark-f9.jpg" alt="Primark X-Mas Route A, closing beat" loading="lazy">
+    </div>
+  </section>
+
+  <div class="pn">
+    <a href="case-siemens.html">&larr; Siemens</a>
+    <a href="case-compeed.html">Compeed <span class="arrow">&gt;</span></a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.media[data-video]').forEach(w=>{const v=w.querySelector('video');v.src=w.dataset.video;v.addEventListener('error',()=>w.classList.add('missing'))});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const v=e.target.querySelector('video');if(v&&!e.target.classList.contains('missing'))v.play().catch(()=>{})}else{const v=e.target.querySelector('video');if(v)v.pause()}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

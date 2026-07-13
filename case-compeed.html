@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compeed, FOOH · Ana Muros</title>
+<meta name="description" content="A faux out-of-home CGI spectacle for Compeed, hyperreal advertising built for organic reach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">ANA MUROS :)</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case">
+  <div class="container">
+    <p class="meta reveal">COMPEED · PERRIGO · FAUX OUT OF HOME</p>
+    <h1 class="display reveal">Advertising that never happened</h1>
+    <p class="tagline reveal">A CGI spectacle staged in the real world, the billboard Compeed never bought, built to earn the reach money can't.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="facts reveal">
+    <div><p class="k">Year</p><p class="v">2023</p></div>
+    <div><p class="k">Industry</p><p class="v">Health · Consumer Care</p></div>
+    <div><p class="k">Work</p><p class="v">CGI Compositing, Motion, Edit</p></div>
+    <div><p class="k">Format</p><p class="v">FOOH · 9:16 · 10s</p></div>
+  </div>
+
+  <div class="intro reveal">
+    <p>Faux out-of-home lives or dies on one thing: the three seconds where your brain believes it. Real footage of a real landmark, an impossible event composited in with total physical credibility, and by the time you realise it can’t be real, you’ve already decided to share it.</p>
+  </div>
+
+  <div class="beats reveal">
+    <div class="beat"><p class="bk"><span class="n">01</span>Objective</p><p>Earn organic reach for a blister plaster, a product nobody talks about, with attention that media money can’t buy.</p></div>
+    <div class="beat"><p class="bk"><span class="n">02</span>Idea</p><p>Compeed fixes damage. So let it fix a landmark: a monument starts to crumble on camera, and a giant Compeed arrives to save it, “Und der Tag ist gerettet” (and the day is saved).</p></div>
+    <div class="beat"><p class="bk"><span class="n">03</span>Execution</p><p>CGI integration and finish: the installation matched into the location plate, light, scale, shadow, atmosphere, dust and debris sold with physical weight, edited to documentary pacing so the trick lands before the logic catches up.</p></div>
+    <div class="beat"><p class="bk"><span class="n">04</span>Result</p><p>A published FOOH spectacle built for shares, hyperreal enough to stop the scroll, branded enough that the save belongs to Compeed.</p></div>
+  </div>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">The piece <span class="arrow">&gt;</span></h2>
+    <div class="feature-media reveal">
+      <div class="media" data-video="videos/compeed.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">compeed</span></div>
+      <p class="cap meta">FOOH · 9:16 · PUBLISHED · DE</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">The story, beat by beat <span class="arrow">&gt;</span></h2>
+    <p class="lede reveal" style="color:var(--ink-60)">Ten seconds, three acts, how a monument gets in trouble and a plaster becomes the hero.</p>
+    <div class="still-strip reveal">
+      <figure><img class="still" src="images/compeed-b1.jpg" alt="Compeed FOOH, act one: the landmark, untouched" loading="lazy"><figcaption class="cap meta">01 · THE SETUP, a landmark, an ordinary day</figcaption></figure>
+      <figure><img class="still" src="images/compeed-b2.jpg" alt="Compeed FOOH, act two: the damage appears, dust and debris" loading="lazy"><figcaption class="cap meta">02 · THE CRACK, damage erupts, CGI sold as documentary</figcaption></figure>
+      <figure><img class="still" src="images/compeed-b3.jpg" alt="Compeed FOOH, act three: the giant Compeed saves the day" loading="lazy"><figcaption class="cap meta">03 · THE SAVE, und der Tag ist gerettet</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="pn">
+    <a href="case-primark.html">&larr; Primark</a>
+    <a href="case-welltech.html">Welltech <span class="arrow">&gt;</span></a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.media[data-video]').forEach(w=>{const v=w.querySelector('video');v.src=w.dataset.video;v.addEventListener('error',()=>w.classList.add('missing'))});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const v=e.target.querySelector('video');if(v&&!e.target.classList.contains('missing'))v.play().catch(()=>{})}else{const v=e.target.querySelector('video');if(v)v.pause()}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

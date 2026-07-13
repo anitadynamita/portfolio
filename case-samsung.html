@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samsung, Galaxy S24 Epic Tips · Ana Muros</title>
+<meta name="description" content="Motion design for Samsung's Privacy Epic Tips series, Galaxy S24 Ultra features told as thumb-stopping social stories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">ANA MUROS :)</a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="case">
+  <div class="container">
+    <p class="meta reveal">SAMSUNG · PUBLICIS · SOCIAL MOTION</p>
+    <h1 class="display reveal">Stories per feature</h1>
+    <p class="tagline reveal">The Frame and Galaxy S24 Ultra, product features turned into social stories, one film at a time.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="facts reveal">
+    <div><p class="k">Year</p><p class="v">2024</p></div>
+    <div><p class="k">Industry</p><p class="v">Consumer Tech</p></div>
+    <div><p class="k">Work</p><p class="v">Motion Design, Edit, Social Adaptation</p></div>
+    <div><p class="k">Campaigns</p><p class="v">The Frame · Privacy Epic Tips</p></div>
+  </div>
+
+  <div class="intro reveal">
+    <p>Two Samsung products, one storytelling discipline: The Frame, the TV that becomes art when it’s off, and the Galaxy S24 Ultra with its privacy and AI features. Both campaigns ran as vertical social film for the German market in 2024.</p>
+  </div>
+
+  <div class="beats reveal">
+    <div class="beat"><p class="bk"><span class="n">01</span>Objective</p><p>Turn product features, customisable bezels, matte display, Auto Blocker, on-device AI, into something worth stopping a scroll for.</p></div>
+    <div class="beat"><p class="bk"><span class="n">02</span>Idea</p><p>One story per feature: series grammar instead of one-off spots, so each film compounds the campaign instead of competing with it.</p></div>
+    <div class="beat"><p class="bk"><span class="n">03</span>Execution</p><p>Motion for both series: UI and product demonstrations woven seamlessly into live-action footage, each story paced so the demo never breaks the narrative, finished to Samsung’s exacting brand standards.</p></div>
+    <div class="beat"><p class="bk"><span class="n">04</span>Result</p><p>Two series shipped in 2024, The Frame’s gallery-calm films and Epic Tips’ lifestyle episodes, one consistent visual grammar across both.</p></div>
+  </div>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">The Frame, art when it's off <span class="arrow">&gt;</span></h2>
+    <p class="lede reveal" style="color:var(--ink-60)">Two social films, one per feature, motion that behaves like the product: calm, precise, at home on a wall.</p>
+    <div class="vgrid two">
+      <div class="reveal"><div class="media" data-video="videos/case-samsung-frame-custom.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">frame-custom</span></div><p class="cap meta">FILM · CUSTOMIZATION · DE</p></div>
+      <div class="reveal"><div class="media" data-video="videos/case-samsung-frame-matte.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">frame-matte</span></div><p class="cap meta">FILM · MATTE DISPLAY · DE</p></div>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <h2 class="h2 reveal">Galaxy S24, Privacy Epic Tips <span class="arrow">&gt;</span></h2>
+    <p class="lede reveal" style="color:var(--ink-60)">Two episodes of the same system: one story per feature, one consistent visual grammar, built to run as a campaign, not a one-off.</p>
+    <div class="vgrid two">
+      <div class="reveal"><div class="media" data-video="videos/case-samsung-ondevice.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">case-samsung-ondevice</span></div><p class="cap meta">EPISODE · ON-DEVICE AI</p></div>
+      <div class="reveal"><div class="media" data-video="videos/case-samsung-autoblocker.mp4"><video muted loop playsinline preload="metadata"></video><span class="ph-label">case-samsung-autoblocker</span></div><p class="cap meta">EPISODE · AUTO BLOCKER</p></div>
+    </div>
+  </section>
+
+  <div class="pn">
+    <a href="case-sephora.html">&larr; Sephora</a>
+    <a href="case-siemens.html">Siemens <span class="arrow">&gt;</span></a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.media[data-video]').forEach(w=>{const v=w.querySelector('video');v.src=w.dataset.video;v.addEventListener('error',()=>w.classList.add('missing'))});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const v=e.target.querySelector('video');if(v&&!e.target.classList.contains('missing'))v.play().catch(()=>{})}else{const v=e.target.querySelector('video');if(v)v.pause()}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
